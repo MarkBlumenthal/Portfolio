@@ -3,7 +3,6 @@
     padding: 60px 0;
     background: #fff;
     text-align: center;
-    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .contact-section h2 {
@@ -32,12 +31,12 @@
     }
 }
 
+
 /* Image wrapper and spinning frame styles */
 .image-wrapper {
     text-align: center;
     position: relative;
     display: inline-block;
-    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .image-wrapper img {
