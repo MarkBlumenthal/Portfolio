@@ -1,0 +1,187 @@
+/* Hero section styles */
+.hero-area {
+    background: url('images/background-image3.webp') no-repeat center center/cover;
+    padding: 100px 0;
+    padding-left: 180px;
+}
+
+.light-blue {
+    color: #007bff;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-area .content-block {
+    margin: 20px 0;
+    padding-bottom: 8px;
+}
+
+.fa-plus {
+    color: #007bff;
+}
+
+.hero-area h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-area p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-area .btn-main,
+.hero-area .btn-text {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-area .btn-main {
+    margin-right: 10px;
+}
+
+.hero-area .btn-download {
+    background: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero-area .btn-download:hover {
+    background: #cc0000;
+}
+
+.image-block {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the image block */
+    align-items: center;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-wrapper img {
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.fun-facts {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.fun-facts li {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #070707;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.fun-facts li span {
+    margin-right: 10px;
+}
+
+.fun-facts li h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #070707;
+}
+
+.typer {
+    padding-left: 37px;
+}
+
+@keyframes moveLeftRight {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-80px);
+    }
+}
+
+@keyframes moveRightLeft {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(80px);
+    }
+}
+
+.fun-facts li:nth-child(1) {
+    animation: moveLeftRight 3s infinite;
+}
+
+.fun-facts li:nth-child(2) {
+    animation: moveRightLeft 3s infinite;
+}
+
+.fun-facts li:nth-child(3) {
+    animation: moveLeftRight 3s infinite;
+}
+
+@media (max-width: 768px) {
+    .hero-area {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .hero-content,
+    .image-block {
+        flex-direction: column;
+    }
+
+    .hero-area .btn-main,
+    .hero-area .btn-download,
+    .hero-area .btn-text {
+        display: block;
+        margin: 10px auto;
+        width: fit-content;
+    }
+
+    .image-wrapper img {
+        display: block;
+        max-width: none; /* Ensure the image does not shrink */
+        height: auto;
+        border-radius: 10px;
+        margin: 0 auto; /* Center the image */
+    }
+
+    .fun-facts {
+        padding-right: 0;
+        margin-top: 20px;
+    }
+}
+
+

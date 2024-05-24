@@ -1,0 +1,73 @@
+/* General styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure sections are initially visible */
+section {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+/* Slide-in Animations */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+} /* Closing bracket added here */
+
+.slide-in-from-left {
+    animation: slideInFromLeft 3.5s forwards;
+}
+
+.slide-in-from-right {
+    animation: slideInFromRight 3.5s forwards;
+}
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+

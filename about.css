@@ -1,0 +1,61 @@
+/* About section styles */
+.about-section {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+    padding-top: 50px;
+    color: #070707;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.about-section .personal-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #070707;
+}
+
+.about-section .personal-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.about-img-wrap {
+    position: relative;
+}
+
+.about-img-1, .about-img-2 {
+    border-radius: 10px;
+    max-width: 80%;
+    margin-bottom: 10px;
+}
+
+.about-img-1 {
+    margin-left: 180px;
+}
+
+.about-img-2 {
+    position: absolute;
+    top: 100px;
+    left: -15px;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .about-img-1 {
+        margin-left: 0;
+    }
+
+    .about-img-2 {
+        position: relative;
+        top: 10px;
+        left: 0;
+    }
+}
