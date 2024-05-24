@@ -4,6 +4,7 @@
     color: #fff;
     padding: 40px 0;
     text-align: center;
+    position: relative;
 }
 
 .site-footer .footer-brand img {
@@ -143,5 +144,58 @@
 
 .carousel::before {
     left: -100%;
+}
+
+.back-to-top {
+    position: absolute;
+    bottom: 280px; /* Adjust this value to position the button from the bottom of the footer */
+    right: 130px; /* Adjust this value to position the button from the right of the footer */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.back-to-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.back-to-top a:hover {
+    background-color: #0056b3; /* Changed hover color for better effect */
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 280px; /* Adjust for smaller screens */
+        right: 30px; /* Adjust for smaller screens */
+    }
+
+    .back-to-top a {
+        width: 50px; /* Adjust size for smaller screens */
+        height: 50px; /* Adjust size for smaller screens */
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 280px; /* Adjust for smaller screens */
+        right: 20px; /* Adjust for smaller screens */
+    }
+
+    .back-to-top a {
+        width: 40px; /* Adjust size for smaller screens */
+        height: 40px; /* Adjust size for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
 }
 
