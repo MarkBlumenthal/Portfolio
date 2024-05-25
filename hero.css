@@ -172,6 +172,13 @@
         width: auto;
     }
 
+    .hero-area .link-group {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px; /* Adjust gap as needed */
+    }
+
     .image-wrapper img {
         display: block;
         max-width: 100%;
