@@ -119,6 +119,7 @@
 
 .typer {
     padding-left: 37px;
+    font-size: 1.5rem; /* Add this line to change the font size */
 }
 
 @keyframes moveLeftRight {
@@ -151,6 +152,7 @@
     animation: moveLeftRight 3s infinite;
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
     .hero-area {
         padding: 50px 20px;
@@ -165,14 +167,14 @@
     .hero-area .btn-main,
     .hero-area .btn-download,
     .hero-area .btn-text {
-        display: block;
-        margin: 10px auto;
-        width: fit-content;
+        display: inline-block;
+        margin: 10px 5px;
+        width: auto;
     }
 
     .image-wrapper img {
         display: block;
-        max-width: none; 
+        max-width: 80%;
         height: auto;
         border-radius: 10px;
         margin: 0 auto; 
@@ -181,6 +183,10 @@
     .fun-facts {
         padding-right: 0;
         margin-top: 20px;
+    }
+
+    .image-block {
+        flex-direction: column-reverse;
     }
 }
 
