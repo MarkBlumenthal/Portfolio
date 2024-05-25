@@ -72,7 +72,7 @@
 /* Additional media query for devices with width 300px to 800px */
 @media (max-width: 800px) and (min-width: 300px) {
     .navbar .nav-link {
-        font-size: 0.8rem; /* Adjust font size for smaller screens */
+        font-size: 20px; /* Adjust font size for smaller screens */
         margin-left: 5px; /* Adjust margin for smaller screens */
     }
 
@@ -112,7 +112,7 @@
     }
 
     .navbar .nav-link {
-        font-size: 0.7rem; /* Adjust font size for smaller screens */
+        font-size: 17px; /* Adjust font size for smaller screens */
         margin-left: 3px; /* Adjust margin for smaller screens */
     }
 
