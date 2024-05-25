@@ -28,12 +28,13 @@
     color: #fff;
     font-size: 1.5rem;
     margin-right: 10px;
+    position: relative;
+    top: 10px; /* Adjust this value to move the links down */
 }
 
 .logo-list .list-inline-item a:hover {
     color: #007bff;
 }
-
 
 @media (max-width: 768px) {
     .navbar-collapse {
@@ -62,7 +63,26 @@
         font-size: 0.9rem;
         margin-left: 10px;
     }
+
+    .logo-list {
+        padding-right: 210px; 
+    }
 }
 
+/* Additional media query for devices with width 300px to 800px */
+@media (max-width: 800px) and (min-width: 300px) {
+    .navbar .nav-link {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+        margin-left: 5px; /* Adjust margin for smaller screens */
+    }
 
+    .logo-list .list-inline-item a {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        margin-right: 5px; /* Adjust margin for smaller screens */
+        top: 8px; /* Adjust this value to move the links down */
+    }
 
+    .logo-list {
+        padding-right: 200px; /* Adjust this value to move the links more to the left */
+    }
+}
