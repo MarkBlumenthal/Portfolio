@@ -118,7 +118,7 @@
 }
 
 .typer {
-    padding-left: 37px;
+    padding-left: 10px;
     font-size: 1.5rem; /* Add this line to change the font size */
 }
 
@@ -174,10 +174,11 @@
 
     .image-wrapper img {
         display: block;
-        max-width: 80%;
+        max-width: 100%;
         height: auto;
         border-radius: 10px;
-        margin: 0 auto; 
+        margin: 0 auto;
+        border-radius: 50%; 
     }
 
     .fun-facts {
