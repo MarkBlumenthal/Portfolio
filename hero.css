@@ -46,8 +46,18 @@
     font-weight: bold;
 }
 
+.btn-text:hover {
+    background: #fff;
+    color: #007bff; 
+}
+
 .hero-area .btn-main {
     margin-right: 10px;
+}
+
+.btn-main:hover {
+    background: #fff;
+    color: #007bff; 
 }
 
 .hero-area .btn-download {
@@ -63,7 +73,8 @@
 }
 
 .hero-area .btn-download:hover {
-    background: #cc0000;
+    background: #007bff;
+   color: #fff;
 }
 
 .image-block {

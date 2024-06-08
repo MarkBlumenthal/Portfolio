@@ -26,6 +26,12 @@
     border-radius: 50px;
 }
 
+.btn-main:hover {
+    background: #0d0f27;
+    color: #fff; 
+    
+}
+
 @media (max-width: 768px) {
     .contact-section .form-control {
         width: 100%;
