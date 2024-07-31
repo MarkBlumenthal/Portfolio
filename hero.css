@@ -187,7 +187,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px; /* Adjust gap as needed */
+        gap: 10px; 
     }
 
     .image-wrapper img {

@@ -175,27 +175,27 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .back-to-top {
-        bottom: 280px; /* Adjust for smaller screens */
-        right: 30px; /* Adjust for smaller screens */
+        bottom: 280px; 
+        right: 30px; 
     }
 
     .back-to-top a {
-        width: 50px; /* Adjust size for smaller screens */
-        height: 50px; /* Adjust size for smaller screens */
-        font-size: 18px; /* Adjust font size for smaller screens */
+        width: 50px; 
+        height: 50px; 
+        font-size: 18px; 
     }
 }
 
 @media (max-width: 480px) {
     .back-to-top {
-        bottom: 280px; /* Adjust for smaller screens */
-        right: 20px; /* Adjust for smaller screens */
+        bottom: 280px; 
+        right: 20px; 
     }
 
     .back-to-top a {
-        width: 40px; /* Adjust size for smaller screens */
-        height: 40px; /* Adjust size for smaller screens */
-        font-size: 16px; /* Adjust font size for smaller screens */
+        width: 40px; 
+        height: 40px; 
+        font-size: 16px; 
     }
 }
 
