@@ -117,6 +117,54 @@
     opacity: 1;
 }
 
+/* Rattle/Shake on hover for ~3s */
+@keyframes card-rattle {
+  0%, 100% { transform: translate(0, 0) rotate(0); }
+  5%  { transform: translate(-1px, -1px) rotate(-0.9deg); }
+  10% { transform: translate(2px, 0) rotate(0.9deg); }
+  15% { transform: translate(-2px, 1px) rotate(-0.9deg); }
+  20% { transform: translate(2px, -1px) rotate(0.9deg); }
+  25% { transform: translate(-1px, 1px) rotate(-0.9deg); }
+  30% { transform: translate(1px, -1px) rotate(0.9deg); }
+  35% { transform: translate(-2px, 0) rotate(-0.9deg); }
+  40% { transform: translate(2px, 1px) rotate(0.9deg); }
+  45% { transform: translate(-1px, -1px) rotate(-0.9deg); }
+  50% { transform: translate(1px, 0) rotate(0.9deg); }
+  55% { transform: translate(-1px, 1px) rotate(-0.9deg); }
+  60% { transform: translate(2px, -1px) rotate(0.9deg); }
+  65% { transform: translate(-2px, 0) rotate(-0.9deg); }
+  70% { transform: translate(1px, 1px) rotate(0.9deg); }
+  75% { transform: translate(-1px, -1px) rotate(-0.9deg); }
+  80% { transform: translate(2px, 0) rotate(0.9deg); }
+  85% { transform: translate(-2px, 1px) rotate(-0.9deg); }
+  90% { transform: translate(1px, -1px) rotate(0.9deg); }
+  95% { transform: translate(-1px, 0) rotate(-0.9deg); }
+}
+
+/* Apply the rattle only while hovering */
+.portfolio-section .box:hover {
+  animation: card-rattle 2s ease-in-out 1;
+  will-change: transform;
+}
+
+/* White glow behind each card */
+.portfolio-section .box {
+  background: rgba(255, 255, 255, 0.08); /* faint fill so glow shows */
+  box-shadow:
+    0 0 12px 2px rgba(255, 255, 255, 0.35),
+    0 0 28px 8px rgba(255, 255, 255, 0.25),
+    0 0 60px 16px rgba(255, 255, 255, 0.15);
+}
+
+/* Optional: intensify glow on hover */
+.portfolio-section .box:hover {
+  box-shadow:
+    0 0 14px 4px rgba(255, 255, 255, 0.45),
+    0 0 36px 12px rgba(255, 255, 255, 0.35),
+    0 0 80px 24px rgba(255, 255, 255, 0.25);
+}
+
+
 @media (max-width: 768px) {
     .portfolio-section .grid-item {
         width: 100%;
