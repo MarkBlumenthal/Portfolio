@@ -143,7 +143,7 @@
 
 /* Apply the rattle only while hovering */
 .portfolio-section .box:hover {
-  animation: card-rattle 2s ease-in-out 1;
+  animation: card-rattle 1s ease-in-out 1;
   will-change: transform;
 }
 
@@ -163,6 +163,78 @@
     0 0 36px 12px rgba(255, 255, 255, 0.35),
     0 0 80px 24px rgba(255, 255, 255, 0.25);
 }
+
+/* ----- Poker-hand fan layout for portfolio cards ----- */
+.portfolio-section .grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  padding: 2rem 0;
+}
+
+.portfolio-section .grid-item {
+  position: relative;
+  flex: 0 0 260px;              /* adjust if your card width differs */
+  margin-left: -140px;          /* overlap amount; tweak to taste */
+  transform-origin: bottom center;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.portfolio-section .grid-item:first-child { margin-left: 0; }
+
+
+/* Keep existing hover effects on .box intact; just ensure it stacks above neighbors */
+.portfolio-section .grid-item:hover .box {
+  position: relative;
+  z-index: 2;
+}
+
+/* Make poker-hand cards small when idle, full original size on hover */
+.portfolio-section .grid-item {
+  flex: 0 0 360px !important;   /* match original card width */
+  margin-left: -200px !important; /* overlap so the fan fits on one row */
+}
+
+/* Keep your fan angles, but scale cards down by default */
+.portfolio-section .grid-item:nth-child(1)  { transform: rotate(-20deg) translateY(10px) scale(0.8); }
+.portfolio-section .grid-item:nth-child(2)  { transform: rotate(-14deg) translateY(6px)  scale(0.8); }
+.portfolio-section .grid-item:nth-child(3)  { transform: rotate(-8deg)  translateY(3px)  scale(0.8); }
+.portfolio-section .grid-item:nth-child(4)  { transform: rotate(-4deg)  translateY(1px)  scale(0.8); }
+.portfolio-section .grid-item:nth-child(5)  { transform: rotate(0deg)                  scale(0.8); }
+.portfolio-section .grid-item:nth-child(6)  { transform: rotate(4deg)   translateY(1px) scale(0.8); }
+.portfolio-section .grid-item:nth-child(7)  { transform: rotate(8deg)   translateY(3px) scale(0.8); }
+.portfolio-section .grid-item:nth-child(8)  { transform: rotate(14deg)  translateY(6px) scale(0.8); }
+.portfolio-section .grid-item:nth-child(9)  { transform: rotate(20deg)  translateY(10px) scale(0.8); }
+.portfolio-section .grid-item:nth-child(10) { transform: rotate(24deg)  translateY(14px) scale(0.8); }
+.portfolio-section .grid-item:nth-child(11) { transform: rotate(28deg)  translateY(18px) scale(0.8); }
+.portfolio-section .grid-item:nth-child(12) { transform: rotate(32deg)  translateY(22px) scale(0.8); }
+
+/* On hover: pop out AND return to original size */
+.portfolio-section .grid-item:hover {
+  transform: translateY(-18px) scale(1) !important;
+  z-index: 10;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
+}
+
+/* Nudge the entire fan slightly to the right */
+.portfolio-section .grid {
+  transform: translateX(100px);
+}
+
+
+/* Optional: fall back to rows on small screens */
+@media (max-width: 768px) {
+  .portfolio-section .grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(260px, 1fr) );
+    gap: 24px;
+  }
+  .portfolio-section .grid-item {
+    margin-left: 0;
+    transform: none !important;
+  }
+}
+
 
 
 @media (max-width: 768px) {
