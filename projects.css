@@ -1,123 +1,121 @@
 /* Projects section styles */
 .portfolio-section {
-    padding: 60px 0;
-    background: #0d0f27;
-    text-align: center;
+  padding: 60px 0;
+  background: #0d0f27;
+  text-align: center;
 }
 
 .portfolio-section h2 {
-    padding-top: 50px;
-    color: #fff;
+  padding-top: 50px;
+  color: #fff;
 }
 
 .portfolio-section .section-title {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .portfolio-section .grid-item {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .portfolio-section .box {
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .portfolio-section .box img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.5s ease;
 }
 
-/* Remove or comment out this rule to prevent zoom effect on hover */
+/* Prevent zoom on hover */
 .portfolio-section .box:hover img {
-    transform: none; /* Set transform to none to prevent zooming */
+  transform: none;
 }
 
 .portfolio-section .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .portfolio-section .overlay-top,
 .portfolio-section .overlay-bottom {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: rgba(0, 123, 255, 0.8);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(0, 123, 255, 0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .portfolio-section .overlay-top {
-    top: 0;
-    transform: translateY(-100%);
+  top: 0;
+  transform: translateY(-100%);
 }
 
 .portfolio-section .overlay-bottom {
-    bottom: 0;
-    transform: translateY(100%);
+  bottom: 0;
+  transform: translateY(100%);
 }
 
 .portfolio-section .overlay-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    font-size: 15px !important; 
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  font-size: 15px !important;
 }
 
 .portfolio-section .btn {
-    background-color: rgba(186, 40, 202, 0.5);
-    color: rgba(188, 173, 240, 0.8);
-    padding: 10px;
-    width: 50px; /* Ensure this value makes the width equal to the height */
-    height: 50px; /* Ensure this value makes the height equal to the width */
-    border-radius: 50%;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-flex; /* Center the text inside the button */
-    align-items: center; /* Center the text vertically */
-    justify-content: center; /* Center the text horizontally */
-    font-size: 24px; /* Adjust font size for the plus sign */
+  background-color: rgba(186, 40, 202, 0.5);
+  color: rgba(188, 173, 240, 0.8);
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
 
 .portfolio-section .btn::before {
-    content: '+'; /* Set the content to a plus sign */
-    color: black;
+  content: '+';
+  color: black;
 }
 
 .portfolio-section .btn:hover {
-    background-color: #fff; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
+  background-color: #fff;
+  color: #fff;
 }
 
 .portfolio-section .description {
-    margin: 0;
+  margin: 0;
 }
 
 .portfolio-section .box:hover .overlay-top,
 .portfolio-section .box:hover .overlay-bottom {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .portfolio-section .box:hover .overlay-content {
-    opacity: 1;
+  opacity: 1;
 }
 
-/* Rattle/Shake on hover for ~3s */
+/* Rattle/Shake on hover */
 @keyframes card-rattle {
   0%, 100% { transform: translate(0, 0) rotate(0); }
   5%  { transform: translate(-1px, -1px) rotate(-0.9deg); }
@@ -141,7 +139,7 @@
   95% { transform: translate(-1px, 0) rotate(-0.9deg); }
 }
 
-/* Apply the rattle only while hovering */
+/* Apply rattle on hover */
 .portfolio-section .box:hover {
   animation: card-rattle 1s ease-in-out 1;
   will-change: transform;
@@ -149,14 +147,14 @@
 
 /* White glow behind each card */
 .portfolio-section .box {
-  background: rgba(255, 255, 255, 0.08); /* faint fill so glow shows */
+  background: rgba(255, 255, 255, 0.08);
   box-shadow:
     0 0 12px 2px rgba(255, 255, 255, 0.35),
     0 0 28px 8px rgba(255, 255, 255, 0.25),
     0 0 60px 16px rgba(255, 255, 255, 0.15);
 }
 
-/* Optional: intensify glow on hover */
+/* Intensify glow on hover */
 .portfolio-section .box:hover {
   box-shadow:
     0 0 14px 4px rgba(255, 255, 255, 0.45),
@@ -164,83 +162,142 @@
     0 0 80px 24px rgba(255, 255, 255, 0.25);
 }
 
-/* ----- Poker-hand fan layout for portfolio cards ----- */
+/* ----- Poker-hand fan layout (clean) ----- */
 .portfolio-section .grid {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   gap: 0;
   padding: 2rem 0;
+  transform: translateX(35px); /* nudge to the right */
 }
 
 .portfolio-section .grid-item {
   position: relative;
-  flex: 0 0 260px;              /* adjust if your card width differs */
-  margin-left: -140px;          /* overlap amount; tweak to taste */
+  flex: 0 0 360px;   /* final card width */
+  margin-left: -200px; /* overlap */
   transform-origin: bottom center;
   transition: transform 0.25s ease, filter 0.25s ease;
 }
 .portfolio-section .grid-item:first-child { margin-left: 0; }
 
+/* Fan angles (scaled down by default) */
+.portfolio-section .grid-item:nth-child(1)  { transform: rotate(-20deg) translateY(10px)  scale(0.8); }
+.portfolio-section .grid-item:nth-child(2)  { transform: rotate(-14deg) translateY(6px)   scale(0.8); }
+.portfolio-section .grid-item:nth-child(3)  { transform: rotate(-8deg)  translateY(3px)   scale(0.8); }
+.portfolio-section .grid-item:nth-child(4)  { transform: rotate(-4deg)  translateY(1px)   scale(0.8); }
+.portfolio-section .grid-item:nth-child(5)  { transform: rotate(0deg)                    scale(0.8); }
+.portfolio-section .grid-item:nth-child(6)  { transform: rotate(4deg)   translateY(1px)   scale(0.8); }
+.portfolio-section .grid-item:nth-child(7)  { transform: rotate(8deg)   translateY(3px)   scale(0.8); }
+.portfolio-section .grid-item:nth-child(8)  { transform: rotate(14deg)  translateY(6px)   scale(0.8); }
+.portfolio-section .grid-item:nth-child(9)  { transform: rotate(20deg)  translateY(10px)  scale(0.8); }
+.portfolio-section .grid-item:nth-child(10) { transform: rotate(24deg)  translateY(14px)  scale(0.8); }
+.portfolio-section .grid-item:nth-child(11) { transform: rotate(28deg)  translateY(18px)  scale(0.8); }
+.portfolio-section .grid-item:nth-child(12) { transform: rotate(32deg)  translateY(22px)  scale(0.8); }
 
-/* Keep existing hover effects on .box intact; just ensure it stacks above neighbors */
-.portfolio-section .grid-item:hover .box {
-  position: relative;
-  z-index: 2;
-}
-
-/* Make poker-hand cards small when idle, full original size on hover */
-.portfolio-section .grid-item {
-  flex: 0 0 360px !important;   /* match original card width */
-  margin-left: -200px !important; /* overlap so the fan fits on one row */
-}
-
-/* Keep your fan angles, but scale cards down by default */
-.portfolio-section .grid-item:nth-child(1)  { transform: rotate(-20deg) translateY(10px) scale(0.8); }
-.portfolio-section .grid-item:nth-child(2)  { transform: rotate(-14deg) translateY(6px)  scale(0.8); }
-.portfolio-section .grid-item:nth-child(3)  { transform: rotate(-8deg)  translateY(3px)  scale(0.8); }
-.portfolio-section .grid-item:nth-child(4)  { transform: rotate(-4deg)  translateY(1px)  scale(0.8); }
-.portfolio-section .grid-item:nth-child(5)  { transform: rotate(0deg)                  scale(0.8); }
-.portfolio-section .grid-item:nth-child(6)  { transform: rotate(4deg)   translateY(1px) scale(0.8); }
-.portfolio-section .grid-item:nth-child(7)  { transform: rotate(8deg)   translateY(3px) scale(0.8); }
-.portfolio-section .grid-item:nth-child(8)  { transform: rotate(14deg)  translateY(6px) scale(0.8); }
-.portfolio-section .grid-item:nth-child(9)  { transform: rotate(20deg)  translateY(10px) scale(0.8); }
-.portfolio-section .grid-item:nth-child(10) { transform: rotate(24deg)  translateY(14px) scale(0.8); }
-.portfolio-section .grid-item:nth-child(11) { transform: rotate(28deg)  translateY(18px) scale(0.8); }
-.portfolio-section .grid-item:nth-child(12) { transform: rotate(32deg)  translateY(22px) scale(0.8); }
-
-/* On hover: pop out AND return to original size */
+/* Pop out to full size on hover */
 .portfolio-section .grid-item:hover {
   transform: translateY(-18px) scale(1) !important;
   z-index: 10;
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
 }
 
-/* Nudge the entire fan slightly to the right */
-.portfolio-section .grid {
-  transform: translateX(100px);
+/* Ensure hovered card stacks above neighbors */
+.portfolio-section .grid-item:hover .box {
+  position: relative;
+  z-index: 2;
 }
 
-
-/* Optional: fall back to rows on small screens */
+/* -------- Mobile: one column + blue slide on tap/focus -------- */
 @media (max-width: 768px) {
   .portfolio-section .grid {
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(260px, 1fr) );
+    grid-template-columns: 1fr;
     gap: 24px;
+    justify-items: center;
+    transform: none !important;
+    padding: 1rem 0;
   }
   .portfolio-section .grid-item {
-    margin-left: 0;
-    transform: none !important;
+    margin: 0 !important;
+    flex: 0 1 auto !important;
+    width: 92vw;
+    max-width: 520px;
+    transform: none !important; /* turn off fan on small screens */
+  }
+  .portfolio-section .box img {
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  /* Restore blue slide effect on tap/focus */
+  .portfolio-section .box { overflow: hidden !important; }
+  .portfolio-section .overlay {
+    position: absolute !important;
+    top: 0; left: 0;
+    width: 100%; height: 100% !important;
+    display: block !important;
+    z-index: 2;
+  }
+  .portfolio-section .overlay-top,
+  .portfolio-section .overlay-bottom {
+    display: block !important;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .portfolio-section .overlay-top { transform: translateY(-100%); }
+  .portfolio-section .overlay-bottom { transform: translateY(100%); }
+
+  .portfolio-section .overlay-content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .portfolio-section .box:active .overlay-top,
+  .portfolio-section .box:active .overlay-bottom,
+  .portfolio-section .box:focus-within .overlay-top,
+  .portfolio-section .box:focus-within .overlay-bottom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .portfolio-section .box:active .overlay-content,
+  .portfolio-section .box:focus-within .overlay-content {
+    opacity: 1;
+  }
+
+  /* Reduce motion jitter on touch devices */
+  .portfolio-section .box:hover { animation: none; }
+}
+
+/* Mobile: make cards taller so full description fits */
+@media (max-width: 768px) {
+  .portfolio-section .box {
+    min-height: 520px !important;       /* increase/decrease to taste */
+  }
+  .portfolio-section .box img {
+    height: 520px !important;           /* match the box height */
+    aspect-ratio: auto !important;      /* override earlier 16/9 on phones */
+    object-fit: cover;
+  }
+  /* If the description is still long, allow scrolling inside the overlay */
+  .portfolio-section .overlay {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px;
+  }
+  .portfolio-section .overlay-content {
+    max-height: 100%;
+    overflow: auto;
   }
 }
 
-
-
-@media (max-width: 768px) {
-    .portfolio-section .grid-item {
-        width: 100%;
-    }
+/* Very small phones: slightly shorter but still taller than before */
+@media (max-width: 420px) {
+  .portfolio-section .box {
+    min-height: 460px !important;
+  }
+  .portfolio-section .box img {
+    height: 460px !important;
+  }
 }
-
-
