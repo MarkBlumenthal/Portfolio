@@ -170,6 +170,7 @@
   gap: 0;
   padding: 2rem 0;
   transform: translateX(35px); /* nudge to the right */
+  flex-wrap: nowrap;
 }
 
 .portfolio-section .grid-item {
