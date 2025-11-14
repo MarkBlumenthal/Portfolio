@@ -176,7 +176,7 @@
 .portfolio-section .grid-item {
   position: relative;
   flex: 0 0 360px;   /* final card width */
-  margin-left: -200px; /* overlap */
+  margin-left: -180px; /* overlap */
   transform-origin: bottom center;
   transition: transform 0.25s ease, filter 0.25s ease;
 }
