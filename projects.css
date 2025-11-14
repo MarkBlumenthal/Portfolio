@@ -169,7 +169,7 @@
   align-items: flex-end;
   gap: 0;
   padding: 2rem 0;
-  transform: translateX(20px); /* nudge to the right */
+  transform: translateX(-10px); /* nudge to the right */
   flex-wrap: nowrap;
 }
 
